@@ -1,0 +1,14 @@
+package spring.authentication.micro.jpa.repository;
+
+import java.util.Optional;
+import java.util.UUID;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import spring.authentication.micro.jpa.model.User;
+
+public interface UserRepository extends JpaRepository<User, UUID> {
+
+	public Optional<User> findByUserName(String userName);
+
+}
